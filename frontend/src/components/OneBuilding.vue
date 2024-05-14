@@ -46,8 +46,11 @@
     const goBack = () => {
         router.push("/#/");
     };
-
     onMounted(() => {
+      fetchSelectedBuilding()
+    })
+
+    const fetchSelectedBuilding = () => {
       fetch(`http://localhost:3000`)
         .then(response => response.json())
         .then(data => {
@@ -58,9 +61,8 @@
         })
         .catch(error => {
           console.error('Error fetching data:', error);
-        });
-    });
-
+        })
+    }
 </script>
 
 

@@ -15,8 +15,12 @@
     import { ref, onMounted } from 'vue'
 
     const buildings = ref(null)
-
+    
     onMounted(() => {
+      fetchBuildings()
+    })
+
+    const fetchBuildings = async () => {
       fetch('http://localhost:3000')
       .then(response => response.json())
       .then(data => {
@@ -25,7 +29,7 @@
       .catch(error => {
         console.error('Error fetching data:', error)
       })
-    })
+    }
 
     const sortBuildings = (sortByOption) => {
       if (sortByOption === 'carbon_emission_per_square_meter') {
