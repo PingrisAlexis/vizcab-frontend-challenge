@@ -1,29 +1,9 @@
-# frontend
+#### Frontend part:
 
-This template should help get you started developing with Vue 3 in Vite.
+- Navigate to the frontend directory: `cd vizcab-frontend-challenge/frontend`
 
-## Recommended IDE Setup
+- Install dependencies: `npm install`
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- Start the server:  `npm run dev`
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+- The server will be available at: http://localhost:5173
