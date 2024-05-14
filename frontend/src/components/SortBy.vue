@@ -1,13 +1,3 @@
-<script setup>
-    import { defineEmits } from 'vue';
-
-    const emitsSortBy = defineEmits();
-
-    const handleSortBy = (event) => {
-        emitsSortBy('sort-by-changed', event.target.value);
-    }
-</script>
-
 <template>
     <div class="sortby-container">
         <label>
@@ -22,6 +12,16 @@
     </div>
 </template>
 
+<script setup>
+    import { defineEmits } from 'vue';
+
+    const emitsSortBy = defineEmits();
+
+    const handleSortBy = (event) => {
+        emitsSortBy('sort-by-changed', event.target.value);
+    }
+</script>
+
 <style scoped  lang="scss">
 .sortby-container {
     padding: 20px;
@@ -35,9 +35,14 @@
             width: 80px;
             margin: auto;
             background-color: white;
+            position: relative;
+            z-index: 5 !important;
+            top: 15px;
+            left: 20px;
             width: 150px;
             color: var(--color-text-ter);
             border-radius: var(--border-radius);
+            padding: 5px;
         }
         select {
             border: none;
